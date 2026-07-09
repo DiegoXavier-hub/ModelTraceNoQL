@@ -1,0 +1,3 @@
+[     494ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8501/metrics_snapshots/_stcore/health:0
+[     495ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8501/metrics_snapshots/_stcore/host-config:0
+[    1026ms] [LOG] Gather usage stats:  false @ http://localhost:8501/static/js/index.Phesr84n.js:98

@@ -1,0 +1,306 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1210" viewBox="0 0 1600 1210" role="img" aria-labelledby="title desc">
+  <title id="title">ModelTrace entity relationship diagram</title>
+  <desc id="desc">ER-style diagram for the ModelTrace document database.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6da8ff" />
+    </marker>
+    <style>
+      .bg { fill: #090b0f; }
+      .band { fill: #0e141b; stroke: #253244; stroke-width: 1; }
+      .entity { fill: #111820; stroke: #35465b; stroke-width: 1.3; rx: 8; }
+      .core { fill: #10212b; stroke: #00d4ff; stroke-width: 1.6; rx: 8; }
+      .ops { fill: #171821; stroke: #f5b642; stroke-width: 1.2; rx: 8; }
+      .gov { fill: #151927; stroke: #9b7bff; stroke-width: 1.2; rx: 8; }
+      .title { fill: #eef4f8; font: 700 16px Arial, sans-serif; letter-spacing: 0; }
+      .small { fill: #91a1b3; font: 12px Arial, sans-serif; }
+      .pk { fill: #00d4ff; font: 12px Arial, sans-serif; }
+      .fk { fill: #f5b642; font: 12px Arial, sans-serif; }
+      .line { fill: none; stroke: #6da8ff; stroke-width: 1.35; marker-end: url(#arrow); opacity: 0.82; }
+      .embed { fill: none; stroke: #00c88c; stroke-width: 1.2; stroke-dasharray: 5 5; marker-end: url(#arrow); opacity: 0.82; }
+      .label { fill: #d5f6ff; font: 11px Arial, sans-serif; }
+      .section { fill: #6da8ff; font: 800 13px Arial, sans-serif; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1210" />
+  <rect class="band" x="24" y="24" width="1552" height="1162" rx="12" />
+  <text class="title" x="54" y="62">ModelTrace - Modelagem documental NoSQL</text>
+  <text class="small" x="54" y="86">Relacionamentos logicos entre colecoes; documentos centrais usam subdocumentos para decisao, features, explicacoes e feedback.</text>
+
+  <text class="section" x="80" y="150">Tenant e acesso</text>
+  <text class="section" x="80" y="320">Dados e qualidade</text>
+  <text class="section" x="520" y="320">Modelo e governanca</text>
+  <text class="section" x="900" y="320">Decisoes e auditoria</text>
+  <text class="section" x="1260" y="320">Operacao</text>
+
+  <g id="organizations">
+    <rect class="core" x="640" y="108" width="280" height="96" />
+    <text class="title" x="662" y="138">organizations</text>
+    <text class="pk" x="662" y="162">PK _id</text>
+    <text class="small" x="662" y="184">name, plan, settings, created_at</text>
+  </g>
+
+  <g id="users">
+    <rect class="entity" x="80" y="188" width="250" height="122" />
+    <text class="title" x="102" y="218">users</text>
+    <text class="pk" x="102" y="242">PK _id</text>
+    <text class="fk" x="102" y="264">FK org_id</text>
+    <text class="small" x="102" y="286">profile, email_verified, avatar_url</text>
+  </g>
+
+  <g id="saved_views">
+    <rect class="gov" x="80" y="92" width="250" height="80" />
+    <text class="title" x="102" y="122">saved_views</text>
+    <text class="pk" x="102" y="146">PK _id</text>
+    <text class="fk" x="102" y="164">FK org_id, user_id</text>
+  </g>
+
+  <g id="email_tokens">
+    <rect class="gov" x="360" y="92" width="250" height="80" />
+    <text class="title" x="382" y="122">email_tokens</text>
+    <text class="pk" x="382" y="146">PK _id</text>
+    <text class="fk" x="382" y="164">FK org_id, user_id</text>
+  </g>
+
+  <g id="api_keys">
+    <rect class="entity" x="390" y="188" width="250" height="96" />
+    <text class="title" x="412" y="218">api_keys</text>
+    <text class="pk" x="412" y="242">PK _id</text>
+    <text class="fk" x="412" y="264">FK org_id, project_id</text>
+  </g>
+
+  <g id="projects">
+    <rect class="core" x="960" y="188" width="290" height="112" />
+    <text class="title" x="982" y="218">projects</text>
+    <text class="pk" x="982" y="242">PK _id</text>
+    <text class="fk" x="982" y="264">FK org_id</text>
+    <text class="small" x="982" y="286">domain, problem_type, settings</text>
+  </g>
+
+  <g id="notifications">
+    <rect class="ops" x="1260" y="92" width="270" height="80" />
+    <text class="title" x="1282" y="122">notifications</text>
+    <text class="pk" x="1282" y="146">PK _id</text>
+    <text class="fk" x="1282" y="164">FK org_id, user_id, project_id</text>
+  </g>
+
+  <g id="jobs">
+    <rect class="ops" x="1260" y="188" width="270" height="96" />
+    <text class="title" x="1282" y="218">jobs</text>
+    <text class="pk" x="1282" y="242">PK _id</text>
+    <text class="fk" x="1282" y="264">FK org_id, project_id</text>
+  </g>
+
+  <g id="datasets">
+    <rect class="entity" x="80" y="360" width="280" height="104" />
+    <text class="title" x="102" y="390">datasets</text>
+    <text class="pk" x="102" y="414">PK _id</text>
+    <text class="fk" x="102" y="436">FK org_id, project_id</text>
+  </g>
+
+  <g id="data_quality_reports">
+    <rect class="entity" x="80" y="520" width="280" height="104" />
+    <text class="title" x="102" y="550">data_quality_reports</text>
+    <text class="pk" x="102" y="574">PK _id</text>
+    <text class="fk" x="102" y="596">FK dataset_id, project_id</text>
+  </g>
+
+  <g id="models">
+    <rect class="core" x="500" y="360" width="290" height="118" />
+    <text class="title" x="522" y="390">models</text>
+    <text class="pk" x="522" y="414">PK _id</text>
+    <text class="fk" x="522" y="436">FK org_id, project_id</text>
+    <text class="small" x="522" y="458">task_type, labels, expected_features</text>
+  </g>
+
+  <g id="model_versions">
+    <rect class="entity" x="500" y="530" width="290" height="112" />
+    <text class="title" x="522" y="560">model_versions</text>
+    <text class="pk" x="522" y="584">PK _id</text>
+    <text class="fk" x="522" y="606">FK model_id, project_id</text>
+    <text class="small" x="522" y="628">version, status, metrics, artifact_uri</text>
+  </g>
+
+  <g id="model_evaluations">
+    <rect class="gov" x="500" y="700" width="290" height="104" />
+    <text class="title" x="522" y="730">model_evaluations</text>
+    <text class="pk" x="522" y="754">PK _id</text>
+    <text class="fk" x="522" y="776">FK model_id, version_id</text>
+  </g>
+
+  <g id="diagnostic_cache">
+    <rect class="entity" x="500" y="820" width="290" height="82" />
+    <text class="title" x="522" y="850">diagnostic_cache</text>
+    <text class="pk" x="522" y="874">PK _id</text>
+    <text class="fk" x="522" y="896">FK model_id, slice_feature</text>
+  </g>
+
+  <g id="model_cards">
+    <rect class="gov" x="500" y="920" width="290" height="82" />
+    <text class="title" x="522" y="950">model_cards</text>
+    <text class="pk" x="522" y="974">PK _id</text>
+    <text class="fk" x="522" y="996">FK model_id, project_id</text>
+  </g>
+
+  <g id="predictions">
+    <rect class="core" x="900" y="390" width="315" height="158" />
+    <text class="title" x="922" y="420">predictions</text>
+    <text class="pk" x="922" y="444">PK _id</text>
+    <text class="fk" x="922" y="466">FK org_id, project_id, model_id</text>
+    <text class="small" x="922" y="488">embedded: entity, features</text>
+    <text class="small" x="922" y="510">embedded: prediction, explanations</text>
+    <text class="small" x="922" y="532">embedded: decision, feedback, metadata</text>
+  </g>
+
+  <g id="prediction_replays">
+    <rect class="entity" x="900" y="610" width="315" height="104" />
+    <text class="title" x="922" y="640">prediction_replays</text>
+    <text class="pk" x="922" y="664">PK _id</text>
+    <text class="fk" x="922" y="686">FK prediction_id, model_id</text>
+  </g>
+
+  <g id="prediction_scenarios">
+    <rect class="entity" x="900" y="730" width="315" height="74" />
+    <text class="title" x="922" y="760">prediction_scenarios</text>
+    <text class="pk" x="922" y="784">PK _id</text>
+    <text class="fk" x="922" y="798">FK prediction_id, project_id</text>
+  </g>
+
+  <g id="audit_events">
+    <rect class="gov" x="900" y="830" width="315" height="92" />
+    <text class="title" x="922" y="860">audit_events</text>
+    <text class="pk" x="922" y="884">PK _id</text>
+    <text class="fk" x="922" y="906">FK project_id, resource.id</text>
+  </g>
+
+  <g id="exports">
+    <rect class="entity" x="900" y="950" width="315" height="82" />
+    <text class="title" x="922" y="980">exports</text>
+    <text class="pk" x="922" y="1004">PK _id</text>
+    <text class="fk" x="922" y="1026">FK project_id, created_by</text>
+  </g>
+
+  <g id="entity_notes">
+    <rect class="entity" x="900" y="1060" width="315" height="82" />
+    <text class="title" x="922" y="1090">entity_notes</text>
+    <text class="pk" x="922" y="1114">PK _id</text>
+    <text class="fk" x="922" y="1136">FK project_id, entity_hash</text>
+  </g>
+
+  <g id="metrics_snapshots">
+    <rect class="entity" x="1280" y="360" width="250" height="112" />
+    <text class="title" x="1302" y="390">metrics_snapshots</text>
+    <text class="pk" x="1302" y="414">PK _id</text>
+    <text class="fk" x="1302" y="436">FK project_id, model_id</text>
+    <text class="small" x="1302" y="458">kpis, histogram, confusion matrix</text>
+  </g>
+
+  <g id="dashboard_cache">
+    <rect class="entity" x="1280" y="492" width="250" height="82" />
+    <text class="title" x="1302" y="522">dashboard_cache</text>
+    <text class="pk" x="1302" y="546">PK _id</text>
+    <text class="fk" x="1302" y="568">FK project_id</text>
+  </g>
+
+  <g id="alerts">
+    <rect class="ops" x="1280" y="610" width="250" height="96" />
+    <text class="title" x="1302" y="640">alerts</text>
+    <text class="pk" x="1302" y="664">PK _id</text>
+    <text class="fk" x="1302" y="686">FK project_id, model_id</text>
+  </g>
+
+  <g id="alert_rules">
+    <rect class="ops" x="1280" y="742" width="250" height="88" />
+    <text class="title" x="1302" y="772">alert_rules</text>
+    <text class="pk" x="1302" y="796">PK _id</text>
+    <text class="fk" x="1302" y="818">FK project_id</text>
+  </g>
+
+  <g id="intervention_cases">
+    <rect class="ops" x="1280" y="858" width="250" height="88" />
+    <text class="title" x="1302" y="888">intervention_cases</text>
+    <text class="pk" x="1302" y="912">PK _id</text>
+    <text class="fk" x="1302" y="934">FK prediction_id, project_id</text>
+  </g>
+
+  <g id="incidents">
+    <rect class="ops" x="1280" y="970" width="250" height="42" />
+    <text class="title" x="1302" y="998">incidents</text>
+  </g>
+
+  <path class="line" d="M640 156 C520 156 450 220 330 236" />
+  <text class="label" x="438" y="166">1:N</text>
+  <path class="line" d="M640 146 C520 130 420 126 330 132" />
+  <text class="label" x="410" y="120">views</text>
+  <path class="line" d="M640 132 C628 132 620 132 610 132" />
+  <text class="label" x="616" y="120">1:N</text>
+  <path class="line" d="M330 218 C344 178 350 148 360 132" />
+  <text class="label" x="338" y="176">tokens</text>
+  <path class="line" d="M686 204 C640 230 605 234 640 236" />
+  <text class="label" x="632" y="218">1:N</text>
+  <path class="line" d="M920 172 C990 178 1036 188 1082 188" />
+  <text class="label" x="1002" y="168">1:N</text>
+  <path class="line" d="M920 144 C1060 128 1170 126 1260 132" />
+  <text class="label" x="1128" y="120">notifications</text>
+  <path class="line" d="M1250 244 C1255 244 1258 244 1260 244" />
+  <text class="label" x="1248" y="232">jobs</text>
+
+  <path class="line" d="M1080 300 C960 356 880 394 790 416" />
+  <text class="label" x="900" y="356">1:N</text>
+  <path class="line" d="M960 260 C720 290 520 336 360 400" />
+  <text class="label" x="630" y="302">1:N</text>
+  <path class="line" d="M220 464 C220 486 220 500 220 520" />
+  <text class="label" x="232" y="498">1:N</text>
+  <path class="line" d="M1105 300 C1100 340 1088 366 1070 390" />
+  <text class="label" x="1112" y="352">1:N</text>
+  <path class="line" d="M1250 252 C1350 278 1405 318 1405 360" />
+  <text class="label" x="1348" y="306">1:N</text>
+
+  <path class="line" d="M645 478 C645 498 645 510 645 530" />
+  <text class="label" x="658" y="512">1:N</text>
+  <path class="line" d="M790 422 C830 432 860 444 900 462" />
+  <text class="label" x="836" y="426">1:N</text>
+  <path class="line" d="M645 642 C645 666 645 680 645 700" />
+  <text class="label" x="658" y="676">1:N</text>
+  <path class="line" d="M645 804 C645 810 645 814 645 820" />
+  <text class="label" x="658" y="818">DS Lab</text>
+  <path class="line" d="M645 902 C645 908 645 914 645 920" />
+  <text class="label" x="658" y="914">cards</text>
+
+  <path class="line" d="M1058 548 C1058 572 1058 590 1058 610" />
+  <text class="label" x="1070" y="585">1:N</text>
+  <path class="line" d="M1018 548 C998 620 988 690 1010 730" />
+  <text class="label" x="960" y="684">scenarios</text>
+  <path class="line" d="M1094 548 C1118 640 1138 760 1132 830" />
+  <text class="label" x="1145" y="714">audit</text>
+  <path class="line" d="M1215 464 C1242 454 1258 438 1280 416" />
+  <text class="label" x="1228" y="430">snapshot</text>
+  <path class="line" d="M1215 486 C1242 500 1260 514 1280 532" />
+  <text class="label" x="1228" y="510">cache</text>
+  <path class="line" d="M1215 510 C1246 560 1260 610 1280 650" />
+  <text class="label" x="1228" y="585">alerts</text>
+  <path class="line" d="M1215 530 C1260 650 1300 790 1280 895" />
+  <text class="label" x="1236" y="760">cases</text>
+
+  <path class="line" d="M1250 276 C1358 370 1398 520 1404 610" />
+  <text class="label" x="1392" y="500">1:N</text>
+  <path class="line" d="M1405 706 C1405 724 1405 732 1405 742" />
+  <text class="label" x="1417" y="728">rules</text>
+  <path class="line" d="M1405 830 C1405 846 1405 852 1405 858" />
+  <text class="label" x="1417" y="848">opens</text>
+  <path class="line" d="M1405 946 C1405 958 1405 964 1405 970" />
+  <text class="label" x="1417" y="962">inc</text>
+
+  <path class="line" d="M1058 922 C1058 934 1058 940 1058 950" />
+  <text class="label" x="1070" y="944">exports</text>
+  <path class="line" d="M1105 300 C1110 560 1120 860 1102 1060" />
+  <text class="label" x="1118" y="1010">notes</text>
+  <path class="line" d="M390 240 C330 284 306 320 300 360" />
+  <text class="label" x="322" y="312">scoped</text>
+
+  <path class="embed" d="M925 490 C820 486 770 468 720 456" />
+  <text class="label" x="764" y="478">expected_features</text>
+  <path class="embed" d="M980 548 C960 570 946 592 940 610" />
+  <text class="label" x="928" y="586">replay input</text>
+</svg>

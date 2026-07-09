@@ -1,0 +1,4 @@
+[    1043ms] [LOG] Gather usage stats:  false @ http://localhost:8501/static/js/index.Phesr84n.js:98
+[    4079ms] [WARNING] WARN Scale bindings are currently only supported for scales with unbinned, continuous domains. @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[    4100ms] [WARNING] WARN Infinite extent for field "Documentos_start": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[    4100ms] [WARNING] WARN Infinite extent for field "Documentos_end": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11

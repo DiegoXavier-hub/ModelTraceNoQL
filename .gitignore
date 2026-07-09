@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+.next/
+*.tsbuildinfo
+dist/
+coverage/
+.playwright-cli/
+backend/.data/
+frontend/.env.local
+logs/
+output/doc/*.tmp

@@ -1,0 +1,275 @@
+- generic [ref=e1]:
+  - banner [ref=e2]
+  - generic [ref=e4]:
+    - button [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+    - list [ref=e19]:
+      - listitem [ref=e20]:
+        - link "Visão geral" [ref=e22] [cursor=pointer]:
+          - /url: http://localhost:8501/
+          - generic [ref=e25]: 🛰️
+          - generic [ref=e26]: Visão geral
+      - generic [ref=e27]: Coleções
+      - listitem [ref=e28]:
+        - link "Organizações" [ref=e30] [cursor=pointer]:
+          - /url: http://localhost:8501/organizations
+          - generic [ref=e33]: 🏢
+          - generic [ref=e34]: Organizações
+      - listitem [ref=e35]:
+        - link "Usuários" [ref=e37] [cursor=pointer]:
+          - /url: http://localhost:8501/users
+          - generic [ref=e40]: 👤
+          - generic [ref=e41]: Usuários
+      - listitem [ref=e42]:
+        - link "Projetos" [ref=e44] [cursor=pointer]:
+          - /url: http://localhost:8501/projects
+          - generic [ref=e47]: 📁
+          - generic [ref=e48]: Projetos
+      - listitem [ref=e49]:
+        - link "Modelos" [ref=e51] [cursor=pointer]:
+          - /url: http://localhost:8501/models
+          - generic [ref=e54]: 🤖
+          - generic [ref=e55]: Modelos
+      - listitem [ref=e56]:
+        - link "Versões de Modelo" [ref=e58] [cursor=pointer]:
+          - /url: http://localhost:8501/model_versions
+          - generic [ref=e61]: 🧩
+          - generic [ref=e62]: Versões de Modelo
+      - listitem [ref=e63]:
+        - link "Predições" [ref=e65] [cursor=pointer]:
+          - /url: http://localhost:8501/predictions
+          - generic [ref=e68]: 🎯
+          - generic [ref=e69]: Predições
+      - listitem [ref=e70]:
+        - link "Métricas (Snapshots)" [ref=e72] [cursor=pointer]:
+          - /url: http://localhost:8501/metrics_snapshots
+          - generic [ref=e75]: 📊
+          - generic [ref=e76]: Métricas (Snapshots)
+      - listitem [ref=e77]:
+        - link "Alertas" [ref=e79] [cursor=pointer]:
+          - /url: http://localhost:8501/alerts
+          - generic [ref=e82]: 🚨
+          - generic [ref=e83]: Alertas
+      - listitem [ref=e84]:
+        - link "API Keys" [ref=e86] [cursor=pointer]:
+          - /url: http://localhost:8501/api_keys
+          - generic [ref=e89]: 🔑
+          - generic [ref=e90]: API Keys
+      - listitem [ref=e91]:
+        - link "Auditoria" [ref=e93] [cursor=pointer]:
+          - /url: http://localhost:8501/audit_events
+          - generic [ref=e96]: 📜
+          - generic [ref=e97]: Auditoria
+    - generic [ref=e105]:
+      - generic [ref=e110]:
+        - img [ref=e112]
+        - generic [ref=e118]:
+          - generic [ref=e119]: COLEÇÃO · model_versions
+          - heading "🧩 Versões de Modelo" [level=1] [ref=e121]: 🧩 Versões de Modelo
+          - paragraph [ref=e123]: Versões treinadas de um modelo, com algoritmo e métricas offline.
+        - generic [ref=e124]: LIVE
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: Documentos
+          - generic [ref=e132]: "11"
+          - generic [ref=e133]: na coleção
+        - generic [ref=e134]:
+          - generic [ref=e135]: "Status: production"
+          - generic [ref=e136]: "10"
+          - generic [ref=e137]: mais comum
+        - generic [ref=e138]:
+          - generic [ref=e139]: Campos no doc
+          - generic [ref=e140]: "17"
+          - generic [ref=e141]: do 1º documento
+      - separator [ref=e145]
+      - generic [ref=e147]:
+        - tablist [ref=e149]:
+          - tab "🔍 FIND" [selected] [ref=e150] [cursor=pointer]:
+            - paragraph [ref=e152]: 🔍 FIND
+          - tab "➕ INSERT" [ref=e153] [cursor=pointer]:
+            - paragraph [ref=e155]: ➕ INSERT
+          - tab "✏️ UPDATE" [ref=e156] [cursor=pointer]:
+            - paragraph [ref=e158]: ✏️ UPDATE
+          - tab "🗑️ DELETE" [ref=e159] [cursor=pointer]:
+            - paragraph [ref=e161]: 🗑️ DELETE
+        - tabpanel "🔍 FIND" [ref=e164]:
+          - generic [ref=e167]:
+            - heading "🔍 FIND — consultar documentos" [level=3] [ref=e172]: 🔍 FIND — consultar documentos
+            - generic [ref=e175]:
+              - paragraph [ref=e178]: Modo de busca
+              - radiogroup "Modo de busca" [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]:
+                  - radio "Todos" [checked]
+                  - paragraph [ref=e185]: Todos
+                - generic [ref=e186]:
+                  - radio "Por _id"
+                  - paragraph [ref=e191]: Por _id
+                - generic [ref=e192]:
+                  - radio "Por campo = valor"
+                  - paragraph [ref=e197]: Por campo = valor
+            - generic [ref=e199]:
+              - paragraph [ref=e202]: Limite de resultados
+              - generic [ref=e203]:
+                - slider "Limite de resultados" [ref=e206]:
+                  - generic: "25"
+                - generic [ref=e207]:
+                  - generic [ref=e208]: "1"
+                  - generic [ref=e209]: "200"
+            - generic [ref=e214]:
+              - generic [ref=e215]: Resultados encontrados
+              - generic [ref=e216]: "11"
+            - radiogroup "Visualização" [ref=e219] [cursor=pointer]:
+              - generic [ref=e220]:
+                - radio "🗂️ Cartões" [checked]
+                - paragraph [ref=e225]: 🗂️ Cartões
+              - generic [ref=e226]:
+                - radio "📋 Tabela"
+                - paragraph [ref=e231]: 📋 Tabela
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - generic [ref=e237]:
+                  - generic [ref=e238]: version_83d484328f6a
+                  - generic [ref=e239]:
+                    - generic [ref=e240]: production
+                    - generic [ref=e241]: LightGBM + Isotonic Calibration
+                - generic [ref=e242]: v1
+                - generic [ref=e243]:
+                  - generic [ref=e244]: versionv1
+                  - generic [ref=e245]: algorithmLightGBM + Isotonic Calibration
+                  - generic [ref=e246]: model_idmodel_319c9d8a4740
+                  - generic [ref=e247]: statusproduction
+                  - generic [ref=e248]: criado2026-05-20T00:39:18Z
+              - generic [ref=e249]:
+                - generic [ref=e250]:
+                  - generic [ref=e251]: version_1bdbff036124
+                  - generic [ref=e252]:
+                    - generic [ref=e253]: production
+                    - generic [ref=e254]: LightGBM + Isotonic Calibration
+                - generic [ref=e255]: v1
+                - generic [ref=e256]:
+                  - generic [ref=e257]: versionv1
+                  - generic [ref=e258]: algorithmLightGBM + Isotonic Calibration
+                  - generic [ref=e259]: model_idmodel_987c1e24f344
+                  - generic [ref=e260]: statusproduction
+                  - generic [ref=e261]: criado2026-05-20T00:39:18Z
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - generic [ref=e264]: version_cb840829ff39
+                  - generic [ref=e265]:
+                    - generic [ref=e266]: production
+                    - generic [ref=e267]: LightGBM + Isotonic Calibration
+                - generic [ref=e268]: v1
+                - generic [ref=e269]:
+                  - generic [ref=e270]: versionv1
+                  - generic [ref=e271]: algorithmLightGBM + Isotonic Calibration
+                  - generic [ref=e272]: model_idmodel_1db74e5d29c7
+                  - generic [ref=e273]: statusproduction
+                  - generic [ref=e274]: criado2026-05-20T00:39:18Z
+              - generic [ref=e275]:
+                - generic [ref=e276]:
+                  - generic [ref=e277]: version_0168dcbce574
+                  - generic [ref=e278]:
+                    - generic [ref=e279]: production
+                    - generic [ref=e280]: LightGBM + Isotonic Calibration
+                - generic [ref=e281]: v1
+                - generic [ref=e282]:
+                  - generic [ref=e283]: versionv1
+                  - generic [ref=e284]: algorithmLightGBM + Isotonic Calibration
+                  - generic [ref=e285]: model_idmodel_9eeb587286d9
+                  - generic [ref=e286]: statusproduction
+                  - generic [ref=e287]: criado2026-05-20T00:39:18Z
+              - generic [ref=e288]:
+                - generic [ref=e289]:
+                  - generic [ref=e290]: version_d65e6545c939
+                  - generic [ref=e291]:
+                    - generic [ref=e292]: production
+                    - generic [ref=e293]: LightGBM + Isotonic Calibration
+                - generic [ref=e294]: v1
+                - generic [ref=e295]:
+                  - generic [ref=e296]: versionv1
+                  - generic [ref=e297]: algorithmLightGBM + Isotonic Calibration
+                  - generic [ref=e298]: model_idmodel_3276ff22f420
+                  - generic [ref=e299]: statusproduction
+                  - generic [ref=e300]: criado2026-05-20T00:39:18Z
+              - generic [ref=e301]:
+                - generic [ref=e302]:
+                  - generic [ref=e303]: version_ce64d600dbfb
+                  - generic [ref=e304]:
+                    - generic [ref=e305]: production
+                    - generic [ref=e306]: LightGBM + Isotonic Calibration
+                - generic [ref=e307]: v1
+                - generic [ref=e308]:
+                  - generic [ref=e309]: versionv1
+                  - generic [ref=e310]: algorithmLightGBM + Isotonic Calibration
+                  - generic [ref=e311]: model_idmodel_d34f438a6255
+                  - generic [ref=e312]: statusproduction
+                  - generic [ref=e313]: criado2026-05-20T00:39:18Z
+              - generic [ref=e314]:
+                - generic [ref=e315]:
+                  - generic [ref=e316]: version_da0614e795a5
+                  - generic [ref=e317]:
+                    - generic [ref=e318]: production
+                    - generic [ref=e319]: Random Survival Forest (scikit-survival)
+                - generic [ref=e320]: v1
+                - generic [ref=e321]:
+                  - generic [ref=e322]: versionv1
+                  - generic [ref=e323]: algorithmRandom Survival Forest (scikit-survival)
+                  - generic [ref=e324]: model_idmodel_f843f54e96c4
+                  - generic [ref=e325]: statusproduction
+                  - generic [ref=e326]: criado2026-05-20T00:39:18Z
+              - generic [ref=e327]:
+                - generic [ref=e328]:
+                  - generic [ref=e329]: version_fcf79ddf3caa
+                  - generic [ref=e330]:
+                    - generic [ref=e331]: production
+                    - generic [ref=e332]: LSTM-Autoencoder + IsolationForest
+                - generic [ref=e333]: v1
+                - generic [ref=e334]:
+                  - generic [ref=e335]: versionv1
+                  - generic [ref=e336]: algorithmLSTM-Autoencoder + IsolationForest
+                  - generic [ref=e337]: model_idmodel_8d5323cc6fba
+                  - generic [ref=e338]: statusproduction
+                  - generic [ref=e339]: criado2026-05-20T00:39:18Z
+              - generic [ref=e340]:
+                - generic [ref=e341]:
+                  - generic [ref=e342]: version_fd2bac4b17bc
+                  - generic [ref=e343]:
+                    - generic [ref=e344]: deprecated
+                    - generic [ref=e345]: Transformer Hawkes (custom, PyTorch)
+                - generic [ref=e346]: v2_60s_LeTourneauL1850
+                - generic [ref=e347]:
+                  - generic [ref=e348]: versionv2_60s_LeTourneauL1850
+                  - generic [ref=e349]: algorithmTransformer Hawkes (custom, PyTorch)
+                  - generic [ref=e350]: model_idmodel_8beeb0eb8486
+                  - generic [ref=e351]: statusdeprecated
+                  - generic [ref=e352]: criado2026-05-20T00:39:18Z
+              - generic [ref=e353]:
+                - generic [ref=e354]:
+                  - generic [ref=e355]: version_64d34ebaa2b0
+                  - generic [ref=e356]:
+                    - generic [ref=e357]: production
+                    - generic [ref=e358]: NumPyro NUTS Hierarchical (NCP)
+                - generic [ref=e359]: v1
+                - generic [ref=e360]:
+                  - generic [ref=e361]: versionv1
+                  - generic [ref=e362]: algorithmNumPyro NUTS Hierarchical (NCP)
+                  - generic [ref=e363]: model_idmodel_1cbd556d7054
+                  - generic [ref=e364]: statusproduction
+                  - generic [ref=e365]: criado2026-05-20T00:39:18Z
+              - generic [ref=e366]:
+                - generic [ref=e367]:
+                  - generic [ref=e368]: version_2af39f503548
+                  - generic [ref=e369]:
+                    - generic [ref=e370]: production
+                    - generic [ref=e371]: PPO (Stable-Baselines3)
+                - generic [ref=e372]: v1
+                - generic [ref=e373]:
+                  - generic [ref=e374]: versionv1
+                  - generic [ref=e375]: algorithmPPO (Stable-Baselines3)
+                  - generic [ref=e376]: model_idmodel_ec8f20539053
+                  - generic [ref=e377]: statusproduction
+                  - generic [ref=e378]: criado2026-05-20T00:39:18Z
+            - group [ref=e380]:
+              - generic "Ver JSON dos primeiros 11 documentos" [ref=e381] [cursor=pointer]:
+                - paragraph [ref=e384]: Ver JSON dos primeiros 11 documentos
+                - img [ref=e385]

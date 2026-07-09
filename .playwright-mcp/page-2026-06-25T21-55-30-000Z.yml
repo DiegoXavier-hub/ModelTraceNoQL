@@ -1,0 +1,118 @@
+- generic [ref=e1]:
+  - banner [ref=e2]
+  - generic [ref=e14]:
+    - button [ref=e17] [cursor=pointer]:
+      - img [ref=e18]
+    - list [ref=e27]:
+      - listitem [ref=e28]:
+        - link "Visão geral" [ref=e30] [cursor=pointer]:
+          - /url: http://localhost:8501/
+          - generic [ref=e33]: 🛰️
+          - generic [ref=e34]: Visão geral
+      - generic [ref=e35]: Coleções
+      - listitem [ref=e36]:
+        - link "Organizações" [ref=e38] [cursor=pointer]:
+          - /url: http://localhost:8501/organizations
+          - generic [ref=e41]: 🏢
+          - generic [ref=e42]: Organizações
+      - listitem [ref=e43]:
+        - link "Usuários" [ref=e45] [cursor=pointer]:
+          - /url: http://localhost:8501/users
+          - generic [ref=e48]: 👤
+          - generic [ref=e49]: Usuários
+      - listitem [ref=e50]:
+        - link "Projetos" [ref=e52] [cursor=pointer]:
+          - /url: http://localhost:8501/projects
+          - generic [ref=e55]: 📁
+          - generic [ref=e56]: Projetos
+      - listitem [ref=e57]:
+        - link "Modelos" [ref=e59] [cursor=pointer]:
+          - /url: http://localhost:8501/models
+          - generic [ref=e62]: 🤖
+          - generic [ref=e63]: Modelos
+      - listitem [ref=e64]:
+        - link "Versões de Modelo" [ref=e66] [cursor=pointer]:
+          - /url: http://localhost:8501/model_versions
+          - generic [ref=e69]: 🧩
+          - generic [ref=e70]: Versões de Modelo
+      - listitem [ref=e71]:
+        - link "Predições" [ref=e73] [cursor=pointer]:
+          - /url: http://localhost:8501/predictions
+          - generic [ref=e76]: 🎯
+          - generic [ref=e77]: Predições
+      - listitem [ref=e78]:
+        - link "Métricas (Snapshots)" [ref=e80] [cursor=pointer]:
+          - /url: http://localhost:8501/metrics_snapshots
+          - generic [ref=e83]: 📊
+          - generic [ref=e84]: Métricas (Snapshots)
+      - listitem [ref=e85]:
+        - link "Alertas" [ref=e87] [cursor=pointer]:
+          - /url: http://localhost:8501/alerts
+          - generic [ref=e90]: 🚨
+          - generic [ref=e91]: Alertas
+      - listitem [ref=e92]:
+        - link "API Keys" [ref=e94] [cursor=pointer]:
+          - /url: http://localhost:8501/api_keys
+          - generic [ref=e97]: 🔑
+          - generic [ref=e98]: API Keys
+      - listitem [ref=e99]:
+        - link "Auditoria" [ref=e101] [cursor=pointer]:
+          - /url: http://localhost:8501/audit_events
+          - generic [ref=e104]: 📜
+          - generic [ref=e105]: Auditoria
+    - generic [ref=e115]:
+      - generic [ref=e120]:
+        - img [ref=e122]
+        - generic [ref=e128]:
+          - generic [ref=e129]: OBSERVABILIDADE DE MODELOS
+          - heading "🛰️ Visão geral" [level=1] [ref=e131]: 🛰️ Visão geral
+          - paragraph [ref=e133]: Monitoramento, governança e auditoria de modelos de machine learning em produção.
+        - generic [ref=e134]: LIVE
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - generic [ref=e141]: Coleções
+          - generic [ref=e142]: "10"
+          - generic [ref=e143]: monitoradas
+        - generic [ref=e144]:
+          - generic [ref=e145]: Registros
+          - generic [ref=e146]: "338"
+          - generic [ref=e147]: no acervo
+        - generic [ref=e148]:
+          - generic [ref=e149]: Predições
+          - generic [ref=e150]: "150"
+          - generic [ref=e151]: decisões
+        - generic [ref=e152]:
+          - generic [ref=e153]: Alertas
+          - generic [ref=e154]: "6"
+          - generic [ref=e155]: operacionais
+        - generic [ref=e156]:
+          - generic [ref=e157]: Auditoria
+          - generic [ref=e158]: "150"
+          - generic [ref=e159]: eventos
+      - separator [ref=e163]
+      - generic [ref=e167]: Fonte de dados
+      - generic [ref=e168]:
+        - paragraph [ref=e176]:
+          - text: Acervo local ·
+          - code [ref=e177]: modeltrace_desktop.json
+        - generic [ref=e182]:
+          - button "📥 Carregar" [ref=e189] [cursor=pointer]:
+            - paragraph [ref=e191]: 📥 Carregar
+          - button "♻️ Restaurar amostra" [ref=e198] [cursor=pointer]:
+            - paragraph [ref=e200]: ♻️ Restaurar amostra
+      - separator [ref=e204]
+      - generic [ref=e208]: Distribuição por coleção
+      - generic [ref=e213]:
+        - button "Download as CSV" [ref=e216] [cursor=pointer]:
+          - img [ref=e217]
+        - button "Search" [ref=e222] [cursor=pointer]:
+          - img [ref=e223]
+        - button "Fullscreen" [ref=e228] [cursor=pointer]:
+          - img [ref=e229]
+      - generic [ref=e242]:
+        - button "Fullscreen" [ref=e247] [cursor=pointer]:
+          - img [ref=e248]
+        - generic [ref=e251]:
+          - generic "Vega visualization" [ref=e252]
+          - group "Click to view actions":
+            - img [ref=e255] [cursor=pointer]

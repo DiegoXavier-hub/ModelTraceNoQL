@@ -1,0 +1,116 @@
+- generic [ref=e1]:
+  - banner [ref=e2]
+  - generic [ref=e4]:
+    - button [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+    - list [ref=e19]:
+      - listitem [ref=e20]:
+        - link "app" [ref=e22] [cursor=pointer]:
+          - /url: http://localhost:8501/app
+          - generic [ref=e23]: app
+      - listitem [ref=e24]:
+        - link "Organizacoes" [ref=e26] [cursor=pointer]:
+          - /url: http://localhost:8501/Organizacoes
+          - generic [ref=e27]: Organizacoes
+      - listitem [ref=e28]:
+        - link "Usuarios" [ref=e30] [cursor=pointer]:
+          - /url: http://localhost:8501/Usuarios
+          - generic [ref=e31]: Usuarios
+      - listitem [ref=e32]:
+        - link "Projetos" [ref=e34] [cursor=pointer]:
+          - /url: http://localhost:8501/Projetos
+          - generic [ref=e35]: Projetos
+      - listitem [ref=e36]:
+        - link "Modelos" [ref=e38] [cursor=pointer]:
+          - /url: http://localhost:8501/Modelos
+          - generic [ref=e39]: Modelos
+      - listitem [ref=e40]:
+        - link "Versoes de Modelo" [ref=e42] [cursor=pointer]:
+          - /url: http://localhost:8501/Versoes_de_Modelo
+          - generic [ref=e43]: Versoes de Modelo
+      - listitem [ref=e44]:
+        - link "Predicoes" [ref=e46] [cursor=pointer]:
+          - /url: http://localhost:8501/Predicoes
+          - generic [ref=e47]: Predicoes
+      - listitem [ref=e48]:
+        - link "Metricas" [ref=e50] [cursor=pointer]:
+          - /url: http://localhost:8501/Metricas
+          - generic [ref=e51]: Metricas
+      - listitem [ref=e52]:
+        - link "Alertas" [ref=e54] [cursor=pointer]:
+          - /url: http://localhost:8501/Alertas
+          - generic [ref=e55]: Alertas
+      - listitem [ref=e56]:
+        - link "API Keys" [ref=e58] [cursor=pointer]:
+          - /url: http://localhost:8501/API_Keys
+          - generic [ref=e59]: API Keys
+      - listitem [ref=e60]:
+        - link "Auditoria" [ref=e62] [cursor=pointer]:
+          - /url: http://localhost:8501/Auditoria
+          - generic [ref=e63]: Auditoria
+    - generic [ref=e71]:
+      - generic [ref=e76]:
+        - img [ref=e78]
+        - generic [ref=e84]:
+          - generic [ref=e85]: MLOPS · NOSQL CONSOLE
+          - heading "🛰️ ModelTrace Desktop" [level=1] [ref=e87]: 🛰️ ModelTrace Desktop
+          - paragraph [ref=e89]: Console local (Streamlit) de operação de modelos — CRUD das coleções NoSQL principais. Mesmo modelo de dados do backend, adaptado para um app Python.
+        - generic [ref=e90]: LIVE
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: Coleções principais
+          - generic [ref=e98]: "10"
+          - generic [ref=e99]: modelo simplificado
+        - generic [ref=e100]:
+          - generic [ref=e101]: Documentos no total
+          - generic [ref=e102]: "338"
+          - generic [ref=e103]: no banco do app
+        - generic [ref=e104]:
+          - generic [ref=e105]: Predições
+          - generic [ref=e106]: "150"
+          - generic [ref=e107]: decisões registradas
+        - generic [ref=e108]:
+          - generic [ref=e109]: Alertas
+          - generic [ref=e110]: "6"
+          - generic [ref=e111]: operacionais
+        - generic [ref=e112]:
+          - generic [ref=e113]: Eventos de auditoria
+          - generic [ref=e114]: "150"
+          - generic [ref=e115]: trilha
+      - separator [ref=e119]
+      - generic [ref=e123]: Banco de dados do app
+      - paragraph [ref=e127]:
+        - text: "Arquivo:"
+        - code [ref=e128]: C:\Users\DiegoHenriqueXavier\Downloads\Projeto NoSQL\desktop_app\data\modeltrace_desktop.json
+      - generic [ref=e129]:
+        - button "📥 Popular (se vazio)" [ref=e136] [cursor=pointer]:
+          - paragraph [ref=e138]: 📥 Popular (se vazio)
+        - button "♻️ Resetar (recriar do backend)" [ref=e148] [cursor=pointer]:
+          - paragraph [ref=e150]: ♻️ Resetar (recriar do backend)
+      - separator [ref=e154]
+      - generic [ref=e158]: Documentos por coleção
+      - generic [ref=e163]:
+        - button "Download as CSV" [ref=e166] [cursor=pointer]:
+          - img [ref=e167]
+        - button "Search" [ref=e172] [cursor=pointer]:
+          - img [ref=e173]
+        - button "Fullscreen" [ref=e178] [cursor=pointer]:
+          - img [ref=e179]
+      - generic [ref=e192]:
+        - button "Fullscreen" [ref=e197] [cursor=pointer]:
+          - img [ref=e198]
+        - generic [ref=e201]:
+          - generic "Vega visualization" [ref=e202]
+          - group "Click to view actions":
+            - img [ref=e205] [cursor=pointer]
+      - alert [ref=e211]:
+        - paragraph [ref=e216]:
+          - text: 👈 Use a barra lateral para abrir a tela de cada coleção. Cada tela tem as operações
+          - strong [ref=e217]: FIND
+          - text: ","
+          - strong [ref=e218]: INSERT
+          - text: ","
+          - strong [ref=e219]: UPDATE
+          - text: e
+          - strong [ref=e220]: DELETE
+          - text: .

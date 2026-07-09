@@ -1,0 +1,24 @@
+# requirements_deploy.txt - subset minimalista para inferência em produção.
+# Frente F5 da Fase 6 (TCC Don't Go - Vale).
+#
+# Inclui apenas o necessário para:
+#   - Carregar features parquet pré-computadas (pyarrow + pandas)
+#   - Executar boosters LightGBM + calibradores Platt/Isotonic (lightgbm + scikit-learn + joblib)
+#   - Linha de comando de inferência (src/serving/predict_realtime.py)
+#
+# NÃO inclui (sao necessarios apenas para treino/EDA/avaliação):
+#   - optuna (tuning)            - shap (explainability)
+#   - catboost / xgboost          - lifelines / statsmodels (PA-2)
+#   - torch* / prophet            - matplotlib / seaborn / plotly
+#   - duckdb (apenas EDA/build)   - openpyxl (Excel)
+#   - jupyter / ipykernel         - tqdm
+#
+# Para reproduzir EDA/treino completo, use o requirements.txt principal.
+
+joblib==1.4.2
+lightgbm==4.6.0
+numpy==2.3.3
+pandas==2.3.3
+pyarrow==23.0.1
+scikit-learn==1.7.2
+scipy==1.16.3

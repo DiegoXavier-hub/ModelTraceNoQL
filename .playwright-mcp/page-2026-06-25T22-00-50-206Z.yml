@@ -1,0 +1,176 @@
+- generic [ref=e1]:
+  - banner [ref=e2]
+  - generic [ref=e4]:
+    - button [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+    - list [ref=e19]:
+      - listitem [ref=e20]:
+        - link "Visão geral" [ref=e22] [cursor=pointer]:
+          - /url: http://localhost:8501/
+          - generic [ref=e25]: 🛰️
+          - generic [ref=e26]: Visão geral
+      - generic [ref=e27]: Coleções
+      - listitem [ref=e28]:
+        - link "Organizações" [ref=e30] [cursor=pointer]:
+          - /url: http://localhost:8501/organizations
+          - generic [ref=e33]: 🏢
+          - generic [ref=e34]: Organizações
+      - listitem [ref=e35]:
+        - link "Usuários" [ref=e37] [cursor=pointer]:
+          - /url: http://localhost:8501/users
+          - generic [ref=e40]: 👤
+          - generic [ref=e41]: Usuários
+      - listitem [ref=e42]:
+        - link "Projetos" [ref=e44] [cursor=pointer]:
+          - /url: http://localhost:8501/projects
+          - generic [ref=e47]: 📁
+          - generic [ref=e48]: Projetos
+      - listitem [ref=e49]:
+        - link "Modelos" [ref=e51] [cursor=pointer]:
+          - /url: http://localhost:8501/models
+          - generic [ref=e54]: 🤖
+          - generic [ref=e55]: Modelos
+      - listitem [ref=e56]:
+        - link "Versões de Modelo" [ref=e58] [cursor=pointer]:
+          - /url: http://localhost:8501/model_versions
+          - generic [ref=e61]: 🧩
+          - generic [ref=e62]: Versões de Modelo
+      - listitem [ref=e63]:
+        - link "Predições" [ref=e65] [cursor=pointer]:
+          - /url: http://localhost:8501/predictions
+          - generic [ref=e68]: 🎯
+          - generic [ref=e69]: Predições
+      - listitem [ref=e70]:
+        - link "Métricas (Snapshots)" [ref=e72] [cursor=pointer]:
+          - /url: http://localhost:8501/metrics_snapshots
+          - generic [ref=e75]: 📊
+          - generic [ref=e76]: Métricas (Snapshots)
+      - listitem [ref=e77]:
+        - link "Alertas" [ref=e79] [cursor=pointer]:
+          - /url: http://localhost:8501/alerts
+          - generic [ref=e82]: 🚨
+          - generic [ref=e83]: Alertas
+      - listitem [ref=e84]:
+        - link "API Keys" [ref=e86] [cursor=pointer]:
+          - /url: http://localhost:8501/api_keys
+          - generic [ref=e89]: 🔑
+          - generic [ref=e90]: API Keys
+      - listitem [ref=e91]:
+        - link "Auditoria" [ref=e93] [cursor=pointer]:
+          - /url: http://localhost:8501/audit_events
+          - generic [ref=e96]: 📜
+          - generic [ref=e97]: Auditoria
+    - generic [ref=e105]:
+      - generic [ref=e110]:
+        - img [ref=e112]
+        - generic [ref=e118]:
+          - generic [ref=e119]: COLEÇÃO · metrics_snapshots
+          - heading "📊 Métricas (Snapshots)" [level=1] [ref=e121]: 📊 Métricas (Snapshots)
+          - paragraph [ref=e123]: Materializações de métricas por período para leitura rápida.
+        - generic [ref=e124]: LIVE
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: Documentos
+          - generic [ref=e132]: "6"
+          - generic [ref=e133]: na coleção
+        - generic [ref=e134]:
+          - generic [ref=e135]: Campos no doc
+          - generic [ref=e136]: "11"
+          - generic [ref=e137]: do 1º documento
+      - separator [ref=e141]
+      - generic [ref=e143]:
+        - tablist [ref=e145]:
+          - tab "🔍 FIND" [selected] [ref=e146] [cursor=pointer]:
+            - paragraph [ref=e148]: 🔍 FIND
+          - tab "➕ INSERT" [ref=e149] [cursor=pointer]:
+            - paragraph [ref=e151]: ➕ INSERT
+          - tab "✏️ UPDATE" [ref=e152] [cursor=pointer]:
+            - paragraph [ref=e154]: ✏️ UPDATE
+          - tab "🗑️ DELETE" [ref=e155] [cursor=pointer]:
+            - paragraph [ref=e157]: 🗑️ DELETE
+        - tabpanel "🔍 FIND" [ref=e160]:
+          - generic [ref=e163]:
+            - heading "🔍 FIND — consultar documentos" [level=3] [ref=e168]: 🔍 FIND — consultar documentos
+            - generic [ref=e171]:
+              - paragraph [ref=e174]: Modo de busca
+              - radiogroup "Modo de busca" [ref=e175] [cursor=pointer]:
+                - generic [ref=e176]:
+                  - radio "Todos" [checked]
+                  - paragraph [ref=e181]: Todos
+                - generic [ref=e182]:
+                  - radio "Por _id"
+                  - paragraph [ref=e187]: Por _id
+                - generic [ref=e188]:
+                  - radio "Por campo = valor"
+                  - paragraph [ref=e193]: Por campo = valor
+            - generic [ref=e195]:
+              - paragraph [ref=e198]: Limite de resultados
+              - generic [ref=e199]:
+                - slider "Limite de resultados" [ref=e202]:
+                  - generic: "25"
+                - generic [ref=e203]:
+                  - generic [ref=e204]: "1"
+                  - generic [ref=e205]: "200"
+            - generic [ref=e210]:
+              - generic [ref=e211]: Resultados encontrados
+              - generic [ref=e212]: "6"
+            - radiogroup "Visualização" [ref=e215] [cursor=pointer]:
+              - generic [ref=e216]:
+                - radio "🗂️ Cartões" [checked]
+                - paragraph [ref=e221]: 🗂️ Cartões
+              - generic [ref=e222]:
+                - radio "📋 Tabela"
+                - paragraph [ref=e227]: 📋 Tabela
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - generic [ref=e234]: metric_day_20260520_model_319c9d8a4740_v1
+                - generic [ref=e235]: metric_day_20260520_model_319c9d8a4740_v1
+                - generic [ref=e236]:
+                  - generic [ref=e237]: model_idmodel_319c9d8a4740
+                  - generic [ref=e238]: model_versionv1
+                  - generic [ref=e239]: granularityday
+                  - generic [ref=e240]: computed_at2026-05-20T00:40:49Z
+              - generic [ref=e241]:
+                - generic [ref=e243]: metric_day_20260520_model_987c1e24f344_v1
+                - generic [ref=e244]: metric_day_20260520_model_987c1e24f344_v1
+                - generic [ref=e245]:
+                  - generic [ref=e246]: model_idmodel_987c1e24f344
+                  - generic [ref=e247]: model_versionv1
+                  - generic [ref=e248]: granularityday
+                  - generic [ref=e249]: computed_at2026-05-20T00:41:02Z
+              - generic [ref=e250]:
+                - generic [ref=e252]: metric_day_20260520_model_1db74e5d29c7_v1
+                - generic [ref=e253]: metric_day_20260520_model_1db74e5d29c7_v1
+                - generic [ref=e254]:
+                  - generic [ref=e255]: model_idmodel_1db74e5d29c7
+                  - generic [ref=e256]: model_versionv1
+                  - generic [ref=e257]: granularityday
+                  - generic [ref=e258]: computed_at2026-05-20T00:41:21Z
+              - generic [ref=e259]:
+                - generic [ref=e261]: metric_day_20260520_model_9eeb587286d9_v1
+                - generic [ref=e262]: metric_day_20260520_model_9eeb587286d9_v1
+                - generic [ref=e263]:
+                  - generic [ref=e264]: model_idmodel_9eeb587286d9
+                  - generic [ref=e265]: model_versionv1
+                  - generic [ref=e266]: granularityday
+                  - generic [ref=e267]: computed_at2026-05-20T00:41:47Z
+              - generic [ref=e268]:
+                - generic [ref=e270]: metric_day_20260520_model_3276ff22f420_v1
+                - generic [ref=e271]: metric_day_20260520_model_3276ff22f420_v1
+                - generic [ref=e272]:
+                  - generic [ref=e273]: model_idmodel_3276ff22f420
+                  - generic [ref=e274]: model_versionv1
+                  - generic [ref=e275]: granularityday
+                  - generic [ref=e276]: computed_at2026-05-20T00:42:20Z
+              - generic [ref=e277]:
+                - generic [ref=e279]: metric_day_20260520_model_d34f438a6255_v1
+                - generic [ref=e280]: metric_day_20260520_model_d34f438a6255_v1
+                - generic [ref=e281]:
+                  - generic [ref=e282]: model_idmodel_d34f438a6255
+                  - generic [ref=e283]: model_versionv1
+                  - generic [ref=e284]: granularityday
+                  - generic [ref=e285]: computed_at2026-05-20T00:43:00Z
+            - group [ref=e287]:
+              - generic "Ver JSON dos primeiros 6 documentos" [ref=e288] [cursor=pointer]:
+                - paragraph [ref=e291]: Ver JSON dos primeiros 6 documentos
+                - img [ref=e292]

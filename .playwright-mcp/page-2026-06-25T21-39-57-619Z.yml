@@ -1,0 +1,108 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e7]:
+      - button "Deploy" [ref=e9] [cursor=pointer]:
+        - generic [ref=e11]: Deploy
+      - button [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+  - generic [ref=e4]:
+    - button [ref=e19] [cursor=pointer]:
+      - img [ref=e20]
+    - list [ref=e29]:
+      - listitem [ref=e30]:
+        - link "app" [ref=e32] [cursor=pointer]:
+          - /url: http://localhost:8501/app
+          - generic [ref=e33]: app
+      - listitem [ref=e34]:
+        - link "Organizacoes" [ref=e36] [cursor=pointer]:
+          - /url: http://localhost:8501/Organizacoes
+          - generic [ref=e37]: Organizacoes
+      - listitem [ref=e38]:
+        - link "Usuarios" [ref=e40] [cursor=pointer]:
+          - /url: http://localhost:8501/Usuarios
+          - generic [ref=e41]: Usuarios
+      - listitem [ref=e42]:
+        - link "Projetos" [ref=e44] [cursor=pointer]:
+          - /url: http://localhost:8501/Projetos
+          - generic [ref=e45]: Projetos
+      - listitem [ref=e46]:
+        - link "Modelos" [ref=e48] [cursor=pointer]:
+          - /url: http://localhost:8501/Modelos
+          - generic [ref=e49]: Modelos
+      - listitem [ref=e50]:
+        - link "Versoes de Modelo" [ref=e52] [cursor=pointer]:
+          - /url: http://localhost:8501/Versoes_de_Modelo
+          - generic [ref=e53]: Versoes de Modelo
+      - listitem [ref=e54]:
+        - link "Predicoes" [ref=e56] [cursor=pointer]:
+          - /url: http://localhost:8501/Predicoes
+          - generic [ref=e57]: Predicoes
+      - listitem [ref=e58]:
+        - link "Metricas" [ref=e60] [cursor=pointer]:
+          - /url: http://localhost:8501/Metricas
+          - generic [ref=e61]: Metricas
+      - listitem [ref=e62]:
+        - link "Alertas" [ref=e64] [cursor=pointer]:
+          - /url: http://localhost:8501/Alertas
+          - generic [ref=e65]: Alertas
+      - listitem [ref=e66]:
+        - link "API Keys" [ref=e68] [cursor=pointer]:
+          - /url: http://localhost:8501/API_Keys
+          - generic [ref=e69]: API Keys
+      - listitem [ref=e70]:
+        - link "Auditoria" [ref=e72] [cursor=pointer]:
+          - /url: http://localhost:8501/Auditoria
+          - generic [ref=e73]: Auditoria
+    - generic [ref=e81]:
+      - heading "🚨 Alertas" [level=1] [ref=e86]: 🚨 Alertas
+      - paragraph [ref=e91]: Alertas operacionais gerados por regras (drift, performance, etc.).
+      - generic [ref=e93]:
+        - paragraph [ref=e97]: Documentos na coleção
+        - generic [ref=e99]: "6"
+      - separator [ref=e103]
+      - generic [ref=e105]:
+        - tablist [ref=e107]:
+          - tab "🔍 FIND" [ref=e108] [cursor=pointer]:
+            - paragraph [ref=e110]: 🔍 FIND
+          - tab "➕ INSERT" [ref=e111] [cursor=pointer]:
+            - paragraph [ref=e113]: ➕ INSERT
+          - tab "✏️ UPDATE" [active] [selected] [ref=e114] [cursor=pointer]:
+            - paragraph [ref=e116]: ✏️ UPDATE
+          - tab "🗑️ DELETE" [ref=e117] [cursor=pointer]:
+            - paragraph [ref=e119]: 🗑️ DELETE
+        - tabpanel "✏️ UPDATE" [ref=e479]:
+          - generic [ref=e482]:
+            - heading "✏️ UPDATE — atualizar documento" [level=3] [ref=e487]: ✏️ UPDATE — atualizar documento
+            - generic [ref=e490]:
+              - paragraph [ref=e493]: Selecione o _id
+              - generic [ref=e495]:
+                - generic [ref=e496]:
+                  - generic [ref=e497]: alert_63096b3fe2cc
+                  - combobox "Selected alert_63096b3fe2cc. Selecione o _id" [ref=e499]
+                - img "open" [ref=e501]
+            - group [ref=e504]:
+              - generic "Documento atual" [ref=e505] [cursor=pointer]:
+                - paragraph [ref=e508]: Documento atual
+                - img [ref=e509]
+            - generic [ref=e513]:
+              - paragraph [ref=e516]: Modo de atualização
+              - radiogroup "Modo de atualização" [ref=e517] [cursor=pointer]:
+                - generic [ref=e518]:
+                  - radio "Definir campo ($set)" [checked]
+                  - paragraph [ref=e523]: Definir campo ($set)
+                - generic [ref=e524]:
+                  - radio "Substituir documento (JSON)"
+                  - paragraph [ref=e529]: Substituir documento (JSON)
+            - generic [ref=e530]:
+              - generic [ref=e536]:
+                - generic [ref=e537]:
+                  - paragraph [ref=e539]: Campo (caminho com ponto)
+                  - img [ref=e543]
+                - textbox "Campo (caminho com ponto)" [ref=e548]:
+                  - /placeholder: ""
+              - generic [ref=e554]:
+                - paragraph [ref=e557]: Novo valor
+                - textbox "Novo valor" [ref=e560]:
+                  - /placeholder: ""
+            - button "✏️ Aplicar $set" [ref=e563] [cursor=pointer]:
+              - paragraph [ref=e565]: ✏️ Aplicar $set

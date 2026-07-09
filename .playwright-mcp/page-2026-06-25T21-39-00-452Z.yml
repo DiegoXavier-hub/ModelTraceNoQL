@@ -1,0 +1,128 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e7]:
+      - button "Deploy" [ref=e9] [cursor=pointer]:
+        - generic [ref=e11]: Deploy
+      - button [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+  - generic [ref=e4]:
+    - button [ref=e19] [cursor=pointer]:
+      - img [ref=e20]
+    - list [ref=e29]:
+      - listitem [ref=e30]:
+        - link "app" [ref=e32] [cursor=pointer]:
+          - /url: http://localhost:8501/app
+          - generic [ref=e33]: app
+      - listitem [ref=e34]:
+        - link "Organizacoes" [ref=e36] [cursor=pointer]:
+          - /url: http://localhost:8501/Organizacoes
+          - generic [ref=e37]: Organizacoes
+      - listitem [ref=e38]:
+        - link "Usuarios" [ref=e40] [cursor=pointer]:
+          - /url: http://localhost:8501/Usuarios
+          - generic [ref=e41]: Usuarios
+      - listitem [ref=e42]:
+        - link "Projetos" [ref=e44] [cursor=pointer]:
+          - /url: http://localhost:8501/Projetos
+          - generic [ref=e45]: Projetos
+      - listitem [ref=e46]:
+        - link "Modelos" [ref=e48] [cursor=pointer]:
+          - /url: http://localhost:8501/Modelos
+          - generic [ref=e49]: Modelos
+      - listitem [ref=e50]:
+        - link "Versoes de Modelo" [ref=e52] [cursor=pointer]:
+          - /url: http://localhost:8501/Versoes_de_Modelo
+          - generic [ref=e53]: Versoes de Modelo
+      - listitem [ref=e54]:
+        - link "Predicoes" [ref=e56] [cursor=pointer]:
+          - /url: http://localhost:8501/Predicoes
+          - generic [ref=e57]: Predicoes
+      - listitem [ref=e58]:
+        - link "Metricas" [ref=e60] [cursor=pointer]:
+          - /url: http://localhost:8501/Metricas
+          - generic [ref=e61]: Metricas
+      - listitem [ref=e62]:
+        - link "Alertas" [ref=e64] [cursor=pointer]:
+          - /url: http://localhost:8501/Alertas
+          - generic [ref=e65]: Alertas
+      - listitem [ref=e66]:
+        - link "API Keys" [ref=e68] [cursor=pointer]:
+          - /url: http://localhost:8501/API_Keys
+          - generic [ref=e69]: API Keys
+      - listitem [ref=e70]:
+        - link "Auditoria" [ref=e72] [cursor=pointer]:
+          - /url: http://localhost:8501/Auditoria
+          - generic [ref=e73]: Auditoria
+    - generic [ref=e81]:
+      - heading "🚨 Alertas" [level=1] [ref=e86]: 🚨 Alertas
+      - paragraph [ref=e91]: Alertas operacionais gerados por regras (drift, performance, etc.).
+      - generic [ref=e93]:
+        - paragraph [ref=e97]: Documentos na coleção
+        - generic [ref=e99]: "6"
+      - separator [ref=e103]
+      - generic [ref=e105]:
+        - tablist [ref=e107]:
+          - tab "🔍 FIND" [ref=e108] [cursor=pointer]:
+            - paragraph [ref=e110]: 🔍 FIND
+          - tab "➕ INSERT" [active] [selected] [ref=e111] [cursor=pointer]:
+            - paragraph [ref=e113]: ➕ INSERT
+          - tab "✏️ UPDATE" [ref=e114] [cursor=pointer]:
+            - paragraph [ref=e116]: ✏️ UPDATE
+          - tab "🗑️ DELETE" [ref=e117] [cursor=pointer]:
+            - paragraph [ref=e119]: 🗑️ DELETE
+        - tabpanel "➕ INSERT" [ref=e265]:
+          - generic [ref=e268]:
+            - heading "➕ INSERT — inserir documento" [level=3] [ref=e273]: ➕ INSERT — inserir documento
+            - generic [ref=e276]:
+              - paragraph [ref=e279]: Modo de inserção
+              - radiogroup "Modo de inserção" [ref=e280] [cursor=pointer]:
+                - generic [ref=e281]:
+                  - radio "Formulário" [checked]
+                  - paragraph [ref=e286]: Formulário
+                - generic [ref=e287]:
+                  - radio "JSON completo"
+                  - paragraph [ref=e292]: JSON completo
+            - generic [ref=e296]:
+              - paragraph [ref=e300]: Preencha os campos principais. O _id e created_at são gerados.
+              - generic [ref=e302]:
+                - paragraph [ref=e305]: _id (opcional, gerado se vazio)
+                - textbox "_id (opcional, gerado se vazio)" [ref=e308]:
+                  - /placeholder: ""
+              - generic [ref=e310]:
+                - paragraph [ref=e313]: Título
+                - textbox "Título" [ref=e316]:
+                  - /placeholder: ""
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - paragraph [ref=e321]: Tipo
+                  - img [ref=e325]
+                - textbox "Tipo" [ref=e330]:
+                  - /placeholder: ""
+              - generic [ref=e332]:
+                - paragraph [ref=e335]: Severidade
+                - generic [ref=e337]:
+                  - generic [ref=e338]:
+                    - generic [ref=e339]: medium
+                    - combobox "Selected medium. Severidade" [ref=e341]
+                  - img "open" [ref=e343]
+              - generic [ref=e346]:
+                - paragraph [ref=e349]: Status
+                - generic [ref=e351]:
+                  - generic [ref=e352]:
+                    - generic [ref=e353]: open
+                    - combobox "Selected open. Status" [ref=e355]
+                  - img "open" [ref=e357]
+              - generic [ref=e360]:
+                - paragraph [ref=e363]: Métrica
+                - textbox "Métrica" [ref=e366]:
+                  - /placeholder: ""
+              - generic [ref=e368]:
+                - paragraph [ref=e371]: ID do modelo
+                - textbox "ID do modelo" [ref=e374]:
+                  - /placeholder: ""
+              - generic [ref=e376]:
+                - paragraph [ref=e379]: ID do projeto
+                - textbox "ID do projeto" [ref=e382]:
+                  - /placeholder: ""
+              - button "➕ Inserir" [ref=e386] [cursor=pointer]:
+                - paragraph [ref=e388]: ➕ Inserir

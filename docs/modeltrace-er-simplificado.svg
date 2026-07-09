@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" role="img" aria-labelledby="title desc">
+  <title id="title">ModelTrace - ER simplificado</title>
+  <desc id="desc">Diagrama entidade-relacionamento simplificado das colecoes principais do banco documental ModelTrace, organizado em camadas sem sobreposicao de conectores sobre os blocos.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L11,4 z" fill="#78aefe" />
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.22" />
+    </filter>
+    <style>
+      .bg { fill: #080c12; }
+      .panel { fill: #0d131b; stroke: #223044; stroke-width: 1.1; }
+      .band { fill: #111a24; stroke: #26384f; stroke-width: 1; }
+      .box { fill: #101923; stroke: #41546c; stroke-width: 1.35; rx: 12; filter: url(#soft-shadow); }
+      .core { fill: #0f2430; stroke: #00d4ff; stroke-width: 1.8; rx: 12; filter: url(#soft-shadow); }
+      .cache { fill: #0d251f; stroke: #00c88c; stroke-width: 1.55; rx: 12; filter: url(#soft-shadow); }
+      .op { fill: #211d13; stroke: #f5b642; stroke-width: 1.55; rx: 12; filter: url(#soft-shadow); }
+      .audit { fill: #17152a; stroke: #9b7bff; stroke-width: 1.55; rx: 12; filter: url(#soft-shadow); }
+      .title { fill: #f4f8ff; font: 700 22px Arial, sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #9fb2c8; font: 13px Arial, sans-serif; }
+      .section { fill: #78aefe; font: 700 12px Arial, sans-serif; text-transform: uppercase; letter-spacing: 0; }
+      .entity-title { fill: #f4f8ff; font: 700 16px Arial, sans-serif; letter-spacing: 0; }
+      .pk { fill: #00d4ff; font: 700 12px Arial, sans-serif; }
+      .fk { fill: #ffbf42; font: 700 12px Arial, sans-serif; }
+      .field { fill: #c7d4e5; font: 12px Arial, sans-serif; }
+      .muted { fill: #91a4bb; font: 12px Arial, sans-serif; }
+      .line { fill: none; stroke: #78aefe; stroke-width: 1.7; marker-end: url(#arrow); opacity: 0.92; }
+      .line-soft { fill: none; stroke: #78aefe; stroke-width: 1.35; marker-end: url(#arrow); opacity: 0.68; }
+      .label-bg { fill: #0d131b; stroke: #2c405a; stroke-width: 1; rx: 7; }
+      .label { fill: #d8efff; font: 700 11px Arial, sans-serif; }
+      .legend { fill: #aab7c8; font: 12px Arial, sans-serif; }
+      .dash { fill: none; stroke: #00c88c; stroke-width: 1.5; stroke-dasharray: 8 8; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1220" />
+  <rect class="panel" x="32" y="28" width="1536" height="1164" rx="18" />
+
+  <text class="title" x="64" y="72">ModelTrace - Modelo ER simplificado</text>
+  <text class="subtitle" x="64" y="99">Fluxo principal do banco NoSQL. As setas ficam em corredores vazios; blocos JSON indicam subdocumentos embutidos.</text>
+
+  <rect class="band" x="64" y="128" width="1472" height="174" rx="14" />
+  <text class="section" x="86" y="158">Tenant e acesso</text>
+
+  <rect class="band" x="64" y="326" width="1472" height="582" rx="14" />
+  <text class="section" x="86" y="356">Registro de modelos, metricas e auditoria</text>
+
+  <rect class="band" x="64" y="932" width="1472" height="180" rx="14" />
+  <text class="section" x="86" y="962">Predicoes e alertas operacionais</text>
+
+  <!-- Top layer -->
+  <g id="users">
+    <rect class="box" x="90" y="176" width="310" height="104" />
+    <text class="entity-title" x="116" y="205">users</text>
+    <text class="pk" x="116" y="229">PK _id</text>
+    <text class="fk" x="116" y="249">FK org_id -&gt; organizations</text>
+    <text class="field" x="116" y="269">name, role, preferences, email_hash</text>
+  </g>
+
+  <g id="organizations">
+    <rect class="core" x="645" y="160" width="310" height="128" />
+    <text class="entity-title" x="671" y="190">organizations</text>
+    <text class="pk" x="671" y="214">PK _id</text>
+    <text class="fk" x="671" y="234">FK owner_id -&gt; users</text>
+    <text class="field" x="671" y="254">name, plan, settings, status</text>
+    <text class="muted" x="671" y="274">tenant raiz da plataforma</text>
+  </g>
+
+  <!-- Product layer -->
+  <g id="projects">
+    <rect class="core" x="645" y="386" width="310" height="138" />
+    <text class="entity-title" x="671" y="416">projects</text>
+    <text class="pk" x="671" y="440">PK _id</text>
+    <text class="fk" x="671" y="460">FK org_id -&gt; organizations</text>
+    <text class="fk" x="671" y="480">FK owner_id -&gt; users</text>
+    <text class="field" x="671" y="500">domain, problem_type, settings, stats</text>
+  </g>
+
+  <g id="api_keys">
+    <rect class="box" x="1195" y="392" width="310" height="118" />
+    <text class="entity-title" x="1221" y="422">api_keys</text>
+    <text class="pk" x="1221" y="446">PK _id</text>
+    <text class="fk" x="1221" y="466">FK project_id -&gt; projects</text>
+    <text class="field" x="1221" y="486">prefix, key_hash, scopes, status</text>
+  </g>
+
+  <g id="models">
+    <rect class="core" x="645" y="580" width="310" height="138" />
+    <text class="entity-title" x="671" y="610">models</text>
+    <text class="pk" x="671" y="634">PK _id</text>
+    <text class="fk" x="671" y="654">FK project_id -&gt; projects</text>
+    <text class="fk" x="671" y="674">FK production_version_id</text>
+    <text class="field" x="671" y="694">labels, expected_features, threshold</text>
+  </g>
+
+  <g id="audit_events">
+    <rect class="audit" x="1195" y="592" width="310" height="118" />
+    <text class="entity-title" x="1221" y="622">audit_events</text>
+    <text class="pk" x="1221" y="646">PK _id</text>
+    <text class="fk" x="1221" y="666">FK project_id -&gt; projects</text>
+    <text class="field" x="1221" y="686">actor, event_type, resource, diff</text>
+  </g>
+
+  <g id="model_versions">
+    <rect class="core" x="645" y="774" width="310" height="128" />
+    <text class="entity-title" x="671" y="804">model_versions</text>
+    <text class="pk" x="671" y="828">PK _id</text>
+    <text class="fk" x="671" y="848">FK model_id -&gt; models</text>
+    <text class="field" x="671" y="868">version, algorithm, status</text>
+    <text class="field" x="671" y="888">features, offline_metrics</text>
+  </g>
+
+  <g id="metrics_snapshots">
+    <rect class="cache" x="90" y="760" width="310" height="118" />
+    <text class="entity-title" x="116" y="790">metrics_snapshots</text>
+    <text class="pk" x="116" y="814">PK _id</text>
+    <text class="fk" x="116" y="834">FK model_id -&gt; models</text>
+    <text class="field" x="116" y="854">period, performance, confusion_matrix</text>
+  </g>
+
+  <!-- Output layer -->
+  <g id="predictions">
+    <rect class="core" x="645" y="966" width="310" height="128" />
+    <text class="entity-title" x="671" y="996">predictions</text>
+    <text class="pk" x="671" y="1020">PK _id</text>
+    <text class="fk" x="671" y="1040">FK project_id, model_id, version_id</text>
+    <text class="field" x="671" y="1060">entity, features, prediction, decision</text>
+    <text class="field" x="671" y="1080">feedback, flags, metadata</text>
+  </g>
+
+  <g id="alerts">
+    <rect class="op" x="1195" y="972" width="310" height="118" />
+    <text class="entity-title" x="1221" y="1002">alerts</text>
+    <text class="pk" x="1221" y="1026">PK _id</text>
+    <text class="fk" x="1221" y="1046">FK project_id, model_id</text>
+    <text class="field" x="1221" y="1066">type, severity, status, threshold</text>
+  </g>
+
+  <!-- Main clean vertical chain -->
+  <path class="line" d="M645 224 H410" />
+  <rect class="label-bg" x="512" y="210" width="42" height="22" />
+  <text class="label" x="523" y="225">1:N</text>
+
+  <path class="line" d="M800 288 V386" />
+  <rect class="label-bg" x="812" y="327" width="42" height="22" />
+  <text class="label" x="823" y="342">1:N</text>
+
+  <path class="line" d="M800 524 V580" />
+  <rect class="label-bg" x="812" y="542" width="42" height="22" />
+  <text class="label" x="823" y="557">1:N</text>
+
+  <path class="line" d="M800 718 V774" />
+  <rect class="label-bg" x="812" y="736" width="42" height="22" />
+  <text class="label" x="823" y="751">1:N</text>
+
+  <path class="line" d="M800 902 V966" />
+  <rect class="label-bg" x="812" y="925" width="42" height="22" />
+  <text class="label" x="823" y="940">1:N</text>
+
+  <!-- Side relationships routed through empty corridors -->
+  <path class="line-soft" d="M955 455 H1195" />
+  <rect class="label-bg" x="1062" y="441" width="42" height="22" />
+  <text class="label" x="1073" y="456">1:N</text>
+
+  <path class="line-soft" d="M955 486 H1076 V651 H1195" />
+  <rect class="label-bg" x="1048" y="556" width="42" height="22" />
+  <text class="label" x="1059" y="571">1:N</text>
+
+  <path class="line-soft" d="M645 649 H524 V819 H410" />
+  <rect class="label-bg" x="493" y="726" width="42" height="22" />
+  <text class="label" x="504" y="741">1:N</text>
+
+  <path class="line-soft" d="M955 718 H1128 V1030 H1195" />
+  <rect class="label-bg" x="1107" y="823" width="42" height="22" />
+  <text class="label" x="1118" y="838">1:N</text>
+
+  <!-- Legend -->
+  <rect class="panel" x="64" y="1140" width="1472" height="38" rx="10" />
+  <line class="dash" x1="92" y1="1159" x2="168" y2="1159" />
+  <text class="legend" x="188" y="1164">Em predictions, os blocos entity, features, prediction, decision, feedback, flags e metadata sao documentos embutidos. project_id, model_id e model_version_id ficam repetidos para consultas rapidas.</text>
+</svg>

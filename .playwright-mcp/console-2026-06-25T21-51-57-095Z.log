@@ -1,0 +1,29 @@
+[     675ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8501/Alertas/_stcore/health:0
+[     676ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8501/Alertas/_stcore/host-config:0
+[    1229ms] [LOG] Gather usage stats:  false @ http://localhost:8501/static/js/index.Phesr84n.js:98
+[  141318ms] [WARNING] WARN Scale bindings are currently only supported for scales with unbinned, continuous domains. @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  141378ms] [WARNING] WARN Infinite extent for field "Registros_start": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  141378ms] [WARNING] WARN Infinite extent for field "Registros_end": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  182704ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/Alertas/_stcore/health:0
+[  182704ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/Alertas/_stcore/host-config:0
+[  185544ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[  185545ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[  188392ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/Alertas/_stcore/health:0
+[  188393ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/Alertas/_stcore/host-config:0
+[  191532ms] [ERROR] Cannot send rerun backMessage when disconnected from server. @ http://localhost:8501/static/js/index.Phesr84n.js:98
+[  191568ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[  191569ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[  192611ms] [ERROR] Cannot send rerun backMessage when disconnected from server. @ http://localhost:8501/static/js/index.Phesr84n.js:98
+[  193262ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8501/Alertas/_stcore/health:0
+[  193263ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8501/Alertas/_stcore/host-config:0
+[  195486ms] [LOG] Gather usage stats:  false @ http://localhost:8501/static/js/index.Phesr84n.js:98
+[  195554ms] [ERROR] The page that you have requested does not seem to exist. Running the app's main page. @ http://localhost:8501/static/js/index.Phesr84n.js:98
+[  198188ms] [WARNING] WARN Scale bindings are currently only supported for scales with unbinned, continuous domains. @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  198204ms] [WARNING] WARN Infinite extent for field "Registros_start": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  198204ms] [WARNING] WARN Infinite extent for field "Registros_end": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  204132ms] [WARNING] WARN Scale bindings are currently only supported for scales with unbinned, continuous domains. @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  204137ms] [WARNING] WARN Infinite extent for field "Registros_start": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  204137ms] [WARNING] WARN Infinite extent for field "Registros_end": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  204156ms] [WARNING] WARN Scale bindings are currently only supported for scales with unbinned, continuous domains. @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  204162ms] [WARNING] WARN Infinite extent for field "Registros_start": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11
+[  204162ms] [WARNING] WARN Infinite extent for field "Registros_end": [Infinity, -Infinity] @ http://localhost:8501/static/js/index.uwtK13N-.js:11

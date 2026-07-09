@@ -1,0 +1,220 @@
+- generic [ref=e1]:
+  - banner [ref=e2]
+  - generic [ref=e4]:
+    - button [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+    - list [ref=e19]:
+      - listitem [ref=e20]:
+        - link "Visão geral" [ref=e22] [cursor=pointer]:
+          - /url: http://localhost:8501/
+          - generic [ref=e25]: 🛰️
+          - generic [ref=e26]: Visão geral
+      - generic [ref=e27]: Coleções
+      - listitem [ref=e28]:
+        - link "Organizações" [ref=e30] [cursor=pointer]:
+          - /url: http://localhost:8501/organizations
+          - generic [ref=e33]: 🏢
+          - generic [ref=e34]: Organizações
+      - listitem [ref=e35]:
+        - link "Usuários" [ref=e37] [cursor=pointer]:
+          - /url: http://localhost:8501/users
+          - generic [ref=e40]: 👤
+          - generic [ref=e41]: Usuários
+      - listitem [ref=e42]:
+        - link "Projetos" [ref=e44] [cursor=pointer]:
+          - /url: http://localhost:8501/projects
+          - generic [ref=e47]: 📁
+          - generic [ref=e48]: Projetos
+      - listitem [ref=e49]:
+        - link "Modelos" [ref=e51] [cursor=pointer]:
+          - /url: http://localhost:8501/models
+          - generic [ref=e54]: 🤖
+          - generic [ref=e55]: Modelos
+      - listitem [ref=e56]:
+        - link "Versões de Modelo" [ref=e58] [cursor=pointer]:
+          - /url: http://localhost:8501/model_versions
+          - generic [ref=e61]: 🧩
+          - generic [ref=e62]: Versões de Modelo
+      - listitem [ref=e63]:
+        - link "Predições" [ref=e65] [cursor=pointer]:
+          - /url: http://localhost:8501/predictions
+          - generic [ref=e68]: 🎯
+          - generic [ref=e69]: Predições
+      - listitem [ref=e70]:
+        - link "Métricas (Snapshots)" [ref=e72] [cursor=pointer]:
+          - /url: http://localhost:8501/metrics_snapshots
+          - generic [ref=e75]: 📊
+          - generic [ref=e76]: Métricas (Snapshots)
+      - listitem [ref=e77]:
+        - link "Alertas" [ref=e79] [cursor=pointer]:
+          - /url: http://localhost:8501/alerts
+          - generic [ref=e82]: 🚨
+          - generic [ref=e83]: Alertas
+      - listitem [ref=e84]:
+        - link "API Keys" [ref=e86] [cursor=pointer]:
+          - /url: http://localhost:8501/api_keys
+          - generic [ref=e89]: 🔑
+          - generic [ref=e90]: API Keys
+      - listitem [ref=e91]:
+        - link "Auditoria" [ref=e93] [cursor=pointer]:
+          - /url: http://localhost:8501/audit_events
+          - generic [ref=e96]: 📜
+          - generic [ref=e97]: Auditoria
+    - generic [ref=e105]:
+      - generic [ref=e110]:
+        - img [ref=e112]
+        - generic [ref=e118]:
+          - generic [ref=e119]: COLEÇÃO · alerts
+          - heading "🚨 Alertas" [level=1] [ref=e121]: 🚨 Alertas
+          - paragraph [ref=e123]: Alertas operacionais gerados por regras (drift, performance, etc.).
+        - generic [ref=e124]: LIVE
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: Documentos
+          - generic [ref=e132]: "6"
+          - generic [ref=e133]: na coleção
+        - generic [ref=e134]:
+          - generic [ref=e135]: Severidade alta
+          - generic [ref=e136]: "0"
+          - generic [ref=e137]: high + critical
+        - generic [ref=e138]:
+          - generic [ref=e139]: "Status: open"
+          - generic [ref=e140]: "6"
+          - generic [ref=e141]: mais comum
+        - generic [ref=e142]:
+          - generic [ref=e143]: Campos no doc
+          - generic [ref=e144]: "15"
+          - generic [ref=e145]: do 1º documento
+      - separator [ref=e149]
+      - generic [ref=e151]:
+        - tablist [ref=e153]:
+          - tab "🔍 FIND" [selected] [ref=e154] [cursor=pointer]:
+            - paragraph [ref=e156]: 🔍 FIND
+          - tab "➕ INSERT" [ref=e157] [cursor=pointer]:
+            - paragraph [ref=e159]: ➕ INSERT
+          - tab "✏️ UPDATE" [ref=e160] [cursor=pointer]:
+            - paragraph [ref=e162]: ✏️ UPDATE
+          - tab "🗑️ DELETE" [ref=e163] [cursor=pointer]:
+            - paragraph [ref=e165]: 🗑️ DELETE
+        - tabpanel "🔍 FIND" [ref=e168]:
+          - generic [ref=e171]:
+            - heading "🔍 FIND — consultar documentos" [level=3] [ref=e176]: 🔍 FIND — consultar documentos
+            - generic [ref=e179]:
+              - paragraph [ref=e182]: Modo de busca
+              - radiogroup "Modo de busca" [ref=e183] [cursor=pointer]:
+                - generic [ref=e184]:
+                  - radio "Todos" [checked]
+                  - paragraph [ref=e189]: Todos
+                - generic [ref=e190]:
+                  - radio "Por _id"
+                  - paragraph [ref=e195]: Por _id
+                - generic [ref=e196]:
+                  - radio "Por campo = valor"
+                  - paragraph [ref=e201]: Por campo = valor
+            - generic [ref=e203]:
+              - paragraph [ref=e206]: Limite de resultados
+              - generic [ref=e207]:
+                - slider "Limite de resultados" [ref=e210]:
+                  - generic: "25"
+                - generic [ref=e211]:
+                  - generic [ref=e212]: "1"
+                  - generic [ref=e213]: "200"
+            - generic [ref=e218]:
+              - generic [ref=e219]: Resultados encontrados
+              - generic [ref=e220]: "6"
+            - radiogroup "Visualização" [ref=e223] [cursor=pointer]:
+              - generic [ref=e224]:
+                - radio "🗂️ Cartões" [checked]
+                - paragraph [ref=e229]: 🗂️ Cartões
+              - generic [ref=e230]:
+                - radio "📋 Tabela"
+                - paragraph [ref=e235]: 📋 Tabela
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - generic [ref=e242]: alert_ba307b14b97c
+                  - generic [ref=e243]:
+                    - generic [ref=e244]: medium
+                    - generic [ref=e245]: open
+                    - generic [ref=e246]: volume_drop
+                - generic [ref=e247]: PA1-H2h | volume diário < 50
+                - generic [ref=e248]:
+                  - generic [ref=e249]: titlePA1-H2h | volume diário < 50
+                  - generic [ref=e250]: typevolume_drop
+                  - generic [ref=e251]: severitymedium
+                  - generic [ref=e252]: statusopen
+                  - generic [ref=e253]: criado2026-05-20T00:44:22Z
+              - generic [ref=e254]:
+                - generic [ref=e255]:
+                  - generic [ref=e256]: alert_79577150fb82
+                  - generic [ref=e257]:
+                    - generic [ref=e258]: medium
+                    - generic [ref=e259]: open
+                    - generic [ref=e260]: volume_drop
+                - generic [ref=e261]: PA1-H4h | volume diário < 50
+                - generic [ref=e262]:
+                  - generic [ref=e263]: titlePA1-H4h | volume diário < 50
+                  - generic [ref=e264]: typevolume_drop
+                  - generic [ref=e265]: severitymedium
+                  - generic [ref=e266]: statusopen
+                  - generic [ref=e267]: criado2026-05-20T00:44:22Z
+              - generic [ref=e268]:
+                - generic [ref=e269]:
+                  - generic [ref=e270]: alert_ee4c1d7ab072
+                  - generic [ref=e271]:
+                    - generic [ref=e272]: medium
+                    - generic [ref=e273]: open
+                    - generic [ref=e274]: volume_drop
+                - generic [ref=e275]: PA1-H6h | volume diário < 50
+                - generic [ref=e276]:
+                  - generic [ref=e277]: titlePA1-H6h | volume diário < 50
+                  - generic [ref=e278]: typevolume_drop
+                  - generic [ref=e279]: severitymedium
+                  - generic [ref=e280]: statusopen
+                  - generic [ref=e281]: criado2026-05-20T00:44:22Z
+              - generic [ref=e282]:
+                - generic [ref=e283]:
+                  - generic [ref=e284]: alert_1ccd2288df06
+                  - generic [ref=e285]:
+                    - generic [ref=e286]: medium
+                    - generic [ref=e287]: open
+                    - generic [ref=e288]: volume_drop
+                - generic [ref=e289]: PA1-H8h | volume diário < 50
+                - generic [ref=e290]:
+                  - generic [ref=e291]: titlePA1-H8h | volume diário < 50
+                  - generic [ref=e292]: typevolume_drop
+                  - generic [ref=e293]: severitymedium
+                  - generic [ref=e294]: statusopen
+                  - generic [ref=e295]: criado2026-05-20T00:44:22Z
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - generic [ref=e298]: alert_90299dcf70dc
+                  - generic [ref=e299]:
+                    - generic [ref=e300]: medium
+                    - generic [ref=e301]: open
+                    - generic [ref=e302]: volume_drop
+                - generic [ref=e303]: PA1-H12h | volume diário < 50
+                - generic [ref=e304]:
+                  - generic [ref=e305]: titlePA1-H12h | volume diário < 50
+                  - generic [ref=e306]: typevolume_drop
+                  - generic [ref=e307]: severitymedium
+                  - generic [ref=e308]: statusopen
+                  - generic [ref=e309]: criado2026-05-20T00:44:22Z
+              - generic [ref=e310]:
+                - generic [ref=e311]:
+                  - generic [ref=e312]: alert_63096b3fe2cc
+                  - generic [ref=e313]:
+                    - generic [ref=e314]: medium
+                    - generic [ref=e315]: open
+                    - generic [ref=e316]: volume_drop
+                - generic [ref=e317]: PA1-H1h | volume diário < 50
+                - generic [ref=e318]:
+                  - generic [ref=e319]: titlePA1-H1h | volume diário < 50
+                  - generic [ref=e320]: typevolume_drop
+                  - generic [ref=e321]: severitymedium
+                  - generic [ref=e322]: statusopen
+                  - generic [ref=e323]: criado2026-05-20T00:44:21Z
+            - group [ref=e325]:
+              - generic "Ver JSON dos primeiros 6 documentos" [ref=e326] [cursor=pointer]:
+                - paragraph [ref=e329]: Ver JSON dos primeiros 6 documentos
+                - img [ref=e330]
