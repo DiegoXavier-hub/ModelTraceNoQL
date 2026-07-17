@@ -17,7 +17,7 @@ scipy==1.16.3
 seaborn==0.13.2
 shap==0.51.0
 statsmodels==0.14.6
-torch==2.8.0+cu129
+torch==2.13.0
 torchvision==0.23.0+cu129
 tqdm==4.67.1
 xgboost==3.2.0
